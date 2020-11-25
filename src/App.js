@@ -8,6 +8,7 @@ import Books from "./pages/books";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import BookDetails from "./components/BookDetails";
+import Protected from "./components/Protected";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
-            <Route path="/book/:id" component={BookDetails} />
+            <Protected path="/book/:id" component={BookDetails} />
             <Route path="/books" component={Books} />
           </Switch>
         </Container>
